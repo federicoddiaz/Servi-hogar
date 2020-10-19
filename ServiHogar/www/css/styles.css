@@ -1,0 +1,243 @@
+input.boton{
+ font-size:20px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ color:white;
+ background:#9B9B9B;
+ border:10px;
+ width:90px;
+ height:35px;
+ border-radius:8px;
+ }
+ 
+ input.botonServicio{
+ text-decoration:none;
+font-weight: 600;
+font-size: 40px;
+color:#000000;
+padding-top:40px;
+padding-bottom:40px;
+padding-left:80px;
+padding-right:80px;
+background-color: transparent;
+border-radius: 15px;
+border-width: 3px;
+border-style: solid;
+border-color: #000000;
+ }
+ 
+input.botonServicio:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+	
+ }
+ 
+ input.botonProfesional{
+ text-decoration:none;
+font-weight: 600;
+font-size: 30px;
+color:#000000;
+padding-top:40px;
+padding-bottom:40px;
+padding-left:80px;
+padding-right:80px;
+background-color: transparent;
+border-radius: 15px;
+border-width: 3px;
+border-style: solid;
+border-color: #000000;
+ }
+ 
+input.botonProfesional:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+ input.botonContrataciones{
+ text-decoration:none;
+font-weight: 600;
+font-size: 30px;
+color:#000000;
+padding-top:40px;
+padding-bottom:40px;
+padding-left:80px;
+padding-right:80px;
+background-color: transparent;
+border-radius: 15px;
+border-width: 3px;
+border-style: solid;
+border-color: #000000;
+ }
+ 
+input.botonContrataciones:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+ 
+ input.enlace {
+ border:0;
+ background-color: transparent;
+ color:#ffffff;
+ cursor:pointer;
+ }
+
+p.azul {
+ color: blue;
+ }
+ 
+ p.verde {
+ color: green;
+ }
+ 
+
+
+
+
+
+input.boton1{
+font-size:18px;
+font-family:Verdana,Helvetica;
+font-weight:bold;
+color:black;
+border-color: black;
+border:10px;
+width:160px;
+height:35px;
+border-radius:10px;
+border: 2px solid #000000;
+cursor:pointer;
+}
+
+.boton1:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+input.boton2{
+font-size:18px;
+font-family:Verdana,Helvetica;
+font-weight:bold;
+color:black;
+border-color: black;
+border:10px;
+width:160px;
+height:35px;
+border-radius:10px;
+border: 2px solid #000000;
+cursor:pointer;
+}
+
+.boton2:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+input.guardarcambios{
+font-size:18px;
+font-family:Verdana,Helvetica;
+font-weight:bold;
+color:black;
+border-color: black;
+border:10px;
+width:190px;
+height:35px;
+border-radius:10px;
+border: 2px solid #000000;
+cursor:pointer;
+}
+
+.guardarcambios:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+input.enlace {
+ border:0;
+ background-color: transparent;
+ color:#ffffff;
+ cursor:pointer;
+ }
+ 
+ 
+ input.enlace2 {
+ border:0;
+ background-color: transparent;
+ position:center;
+ font-size:18px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ color:blue;
+ cursor:pointer;
+ padding-top: 15px;
+ }
+ 
+ input.textbox{
+ border: 2px solid gray;
+ border-radius: 10px;
+ width: 50%;
+ height: auto;
+ }
+ 
+ input.textbox{
+ border: 2px solid gray;
+ border-radius: 10px;
+ width: 50%;
+ height: auto;
+ }
+
+ p.nombre {
+ color: black;
+ position:center;
+ font-size:20px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ }
+
+ p.mail {
+ color: gray;
+ position:center;
+ font-size:16px;
+ font-family:Verdana,Helvetica;
+ }
+ 
+  p.edad {
+ color: black;
+ position:center;
+ font-size:16px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ padding-top: 100px;
+ }
+ 
+ p.tel {
+ color: black;
+ position:center;
+ font-size:16px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ }
+ 
+
+ 
+ p.sexo {
+ color: black;
+ position:left;
+ font-size:16px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ }
+ 
+ p.perfilusuario {
+ color: black;
+ position:center;
+ font-size:20px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ }
+ 
+.responsive {
+  border-radius: 400px;
+  border: 2px solid #000000;
+  width: 40%;
+  height: auto;
+}
+ 
