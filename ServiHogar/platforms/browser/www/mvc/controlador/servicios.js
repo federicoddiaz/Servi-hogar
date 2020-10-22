@@ -1,5 +1,5 @@
-document.getElementById('nbbarra').style.backgroundColor="#D9233C";
-document.getElementById('tbbarra').style.backgroundColor="#D9233C";
+document.getElementById('nbbarra').style.backgroundColor="#0075d9;"
+document.getElementById('tbbarra').style.backgroundColor="#0075d9;"
 document.getElementById('pcimagenes').align="center";
 
  

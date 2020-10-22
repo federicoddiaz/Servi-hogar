@@ -1,3 +1,3 @@
 function cambiarDePagina(){
- window.location.href='mvc/vista/principal.html';
+ window.location.href='mvc/vista/login.html';
  }
