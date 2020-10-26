@@ -1,4 +1,3 @@
-<body background="black">
 $('#Nuevo').click(Nuevo);
 function Nuevo(){
 window.location.href='../vista/crearusuario - copia.html';
