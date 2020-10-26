@@ -8,8 +8,5 @@ $('#inicio').click(inicio);
  window.location.href='../vista/principal.html';
  }
 
- $('#IesLunes').click(iesLunes);
- function iesLunes(){
-	alert ("La oferta educativa del IES incluye los niveles:\n" + 
-	" – Primario\n – Secundario\n – Terciario\n - Universitario");
- }
+
+ 
