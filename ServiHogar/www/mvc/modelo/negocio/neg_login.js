@@ -4,7 +4,7 @@
 // 
 
 
-//Crea una variable global, instancia de DtoUsuario
+//Crea una variable global, instancia de DtoClientes
 var usu_ingreso = new DtoClientes();
 
 // Funcion destinada a validar los datos ingresados, verificar

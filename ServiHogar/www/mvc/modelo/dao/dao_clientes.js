@@ -28,7 +28,8 @@ function leer_por_usuario(dtoClientes) {
     }else{ 
 //Arma el "post" para enviarlo por ajax
 		var parametros = {
-			"Username" : username, "Password" : password,
+			"Username" : username,
+			"Password" : password
 		};
 //Invoca a la url donde se encuentra el archivo "usuario_leer_por_usuario.php"
 		$.ajax({
