@@ -24,12 +24,12 @@ function leer_por_usuario(dtoClientes) {
 	password = dtoClientes.getPassword;
 //Pregunta si es vacio
 	if ( username == "" || password == "") { 
-
+		alert("Entro al if");
     }else{ 
 //Arma el "post" para enviarlo por ajax
 		var parametros = {
 			"Username" : username,
-			"Password" : password
+			"Password" : password,
 		};
 //Invoca a la url donde se encuentra el archivo "usuario_leer_por_usuario.php"
 		$.ajax({
@@ -37,12 +37,12 @@ function leer_por_usuario(dtoClientes) {
 			type: 'post',
 			dataType: 'json',
 			async: false,
-			url: 'https://servi-hogar2020.000webhostapp.com/usuario_leer_por_usuario.php',
+			url: 'https://servi-hogar2020.000webhostapp.com/scripts/usuario_leer_por_usuario.php',
 			success: function(respuesta) {
-				resp_leer_usuario = respuesta['estado'];
+				resp_leer_usuario = "ok";
 //Completa la informacion del DTO con la respuesta del servidor	
 				dtoClientes.setUsername = respuesta['Username'];
-				dtoClientes.setContrasena = respuesta['Password'];	
+				dtoClientes.setPassword = respuesta['Password'];	
 			},
 			error: function(jqXHR, textStatus, errorMessage) {
 				respuestaNoRecibida(jqXHR, textStatus);

@@ -29,8 +29,10 @@
 </head>
 
 <body>
-    <div id="app">
- <!-- Statusbar overlay -->
+<body style="background-color:#000000; overflow:scroll;">
+    <div id="app" class= "editarperfil">
+	
+ 
         <div class="statusbar"></div>
 
         <!-- Your main view, should have "view-main" class -->
@@ -49,16 +51,17 @@
                 <!-- Toolbar -->
                 <div id="tbbarra" class="toolbar">
                     <div class="toolbar-inner">
-					<input type="submit" name="Inicio" id="inicio" value="Inicio" class="enlace" />
-					<input type="submit" name="Perfil" id="perfil" value="Perfil" class="enlace" />
-					<input type="submit" name="Mensajes" id="mensajes" value="Mensajes" class="enlace" />
-					<input type="submit" name="Configuraciones" id="configuraciones" value="Configuraciones" class="enlace" />
+					<input type="submit" name="Inicio" id="inicio" value="INICIO" class="enlace" />
+					<input type="submit" name="Perfil" id="perfil" value="PERFIL" class="enlace" />
+					<input type="submit" name="Mensajes" id="mensajes" value="MENSAJES" class="enlace" />
+					<input type="submit" name="Configuraciones" id="configuraciones" value="CONFIGURACIONES" class="enlace" />
                     <!-- Toolbar links -->
 					
                     </div>
                 </div>
 
                 <!-- Scrollable page content -->
+				<div id="fondo">
                 <div id="pcimagenes" class="page-content">
 					<p class="perfilusuario">EDITAR PERFIL</p>
 					<img alt="PerfilUsuario" src="../../mvc/modelo/imagenes/fotoperfil.png" class="responsive">
@@ -74,14 +77,15 @@
 					<input type="text" name="textbox" class="textbox">
 					<p class="mail">Número de teléfono:</p>
 					<input type="text" name="textbox" class="textbox">
-					<p class="mail"> </p>
-					
-					<input type="submit" name="btguardarc" id="btguardarc" value="Guardar Cambios" class="guardarcambios" />
+										
+					<input type="submit" name="btguardarc" id="btguardarc" value="Guardar Cambios" class="boton1" />
 					
                                        
                 </div>
             </div>
-        </div>
+        
+		</div>
+		</div>
     </div>
     <script type="text/javascript" src="../../cordova.js"></script>
     <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
