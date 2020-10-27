@@ -1,29 +1,22 @@
-$('#retornar').click(retornar);
- function retornar(){
- history.back();
- }
-
-$('#btIngresar').click(ingresar);
- function ingresar(){
- var inUsuario = $('#inUsuario');
- var usuario = inUsuario.val().trim();
-	inUsuario.val(usuario);
- var inContrasena = $('#inContrasena');
- var contrasena = inContrasena.val().trim();
-	inContrasena.val(contrasena);
- var res_validar_ingreso = validar_ingreso(usuario, contrasena);
- if (res_validar_ingreso == "1") {
-	alert ("Ingreso incorrecto");
+$('#btRegistrarse').click(Registrarse);
+function Registrarse(){
+//window.location.href='../vista/principal.html';	
+//return false;
+alert ("entre al boton");
+var usuario = $('#Usuario');
+var password = $('#Password');
+var nombre = $('#Nombre');
+var sexo = $('#Sexo');
+var direccion = $('#Direccion');
+//var fechanac = $('#Fechanac');
+alert ("tengo los datos");
+var res_agregar = agregar_usu(usuario, password, nombre, sexo, direccion);
+alert ("mande los datos");
+if (res_agregar == "2") {
+		window.location.href='../vista/principal.html';	
+		return false;
 	} else {
-		if (res_validar_ingreso == "2") {
-			alert ("Es el primer ingreso");
-		} else {
-			if (res_validar_ingreso == "3") {
-				alert ("Ingreso correcto!!!");
-			} else {
-				alert ("ERROR!!!!");
-					}
-			}
-		}
-
+		 
+		alert ("Ingreso incorrecto");
 	}
+		 }

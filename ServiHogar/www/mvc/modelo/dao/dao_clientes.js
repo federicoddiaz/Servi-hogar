@@ -111,6 +111,7 @@ function modif_por_id(dtoClientes) {
 // Retorna una "se�al" con el resultado del acceso al servidor
 //
 function agregar_usuario(dtoClientes) {
+	alert ("llegue a dao");
 //Define la variable para responder si encontró o no el usuario
 //  Los valores posibles son "er" (error de conexion), "" (no agrego el usuario),
 //  "ok" (agrego el usuario)
@@ -118,9 +119,13 @@ function agregar_usuario(dtoClientes) {
 
 //Arma el "post" para enviarlo por ajax
 	var parametros = {
-		"Dni" : dtoClientes.getDni,
 		"Nombre" : dtoClientes.getNombre,
-		"Contrasena" : dtoClientes.getContrasena,
+		"Username" : dtoClientes.getUsername,
+		"Password" : dtoClientes.getPassword,
+		"Direccion" : dtoClientes.getDireccion,
+		"Sexo" : dtoClientes.getSexo,
+		//"FechaNac" : dtoClientes.getFechaNac,
+		
 	};
 //Invoca a la url donde se encuentra el archivo "usuario_agregar.php"
 	$.ajax({
@@ -128,7 +133,7 @@ function agregar_usuario(dtoClientes) {
 		type: 'post',
 		dataType: 'json',
 		async: false,
-		url: 'https://iestsdsids2.000webhostapp.com/Usuarios/usuario_agregar.php',
+		url: 'https://servi-hogar2020.000webhostapp.com/usuario_agregar.php',
 		success: function(respuesta) {
 			resp_agre_usuario = respuesta['estado'];
 			dtoClientes.setId = respuesta['idUsuarioNuevo'];
@@ -136,6 +141,7 @@ function agregar_usuario(dtoClientes) {
 		error: function(jqXHR, textStatus, errorMessage) {
 			respuestaNoRecibida(jqXHR, textStatus);	
 			resp_agre_usuario = "er";
+			alert("error");
 		}
 	});
 	
