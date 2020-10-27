@@ -279,3 +279,31 @@ input[type="text"] {
   width: 40%;
   height: auto;
   }
+  
+
+ .PrImg1 {
+  padding-top: 100px;
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  text-align:center;
+  
+  }
+   
+  .PrImg2 {
+  padding-top: 100px;
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  text-align:center;
+  
+  }
+  
+  .PrImg3 {
+  padding-top: 100px;
+  display: inline-block;
+  width:50%;
+  height: auto;
+  text-align:center;
+  
+  }
