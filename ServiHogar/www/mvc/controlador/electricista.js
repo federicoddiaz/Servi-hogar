@@ -8,7 +8,7 @@ $('#servicios').click(servicios);
  window.location.href='../vista/servicios.html';
  }
 
- $('#inicio').click(inicio);
+$('#inicio').click(inicio);
  function inicio(){
  window.location.href='../vista/principal.html';
  }
