@@ -17,6 +17,7 @@ function Ingresar(){
 	} else {
 		if (res_validar_ingreso == "2") {
 			window.location.href='../vista/principal.html';
+			return false;
 		} else {
 			alert ("ERROR!!!!" + res_validar_ingreso);
 		}

@@ -139,4 +139,27 @@ function contrasena_correcta(dni, contrasena) {
 		return false;
 	}
 }
+function agregar_usu(usuario, password, nombre, sexo, direccion) {
+alert ("llegue a agregar_usu");
+	var usu_nuevo = new dtoClientes();
+		usu_nuevo.setUsername = usuario;
+		usu_nuevo.setPassword = password;
+		usu_nuevo.setNombre = nombre;
+		usu_nuevo.setSexo = sexo;
+		usu_nuevo.setDireccion = direccion;
+		//usu_nuevo.setFechaNac = fechanac;
+		alert ("termine los set");
+		var resp_agr_usuario = "";
+		resp_agr_usuario = agregar_usuario(usu_nuevo);
+		if (resp_agr_usuario == "ok") {
+			
+				return "2";
+			} else {			
+				return "4";
+		
+	}	
+
+
+}
+
 	
