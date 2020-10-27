@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
@@ -14,10 +24,7 @@
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../../css/styles.css">
-	<link rel="stylesheet" href="../../jquery/jquery.mobile-1.4.5.min.css">
-	<script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="../../jquery/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+	 <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
 </head>
 
 <body>
@@ -31,11 +38,11 @@
             <div data-name="home" class="page">
     
                 <!-- Top Navbar -->
-                <div id="nbbarra" class="navbar">
+                 <div id="nbbarra" class="navbar">
                     <div class="navbar-inner">
-                    <div class="title">Servi Hogar</div>
-					<input type="submit" name="btsalir" id="btsalir" value="Salir" class="boton" />
-					<div class="title"> </div>
+                    <div class="title">Mensajes</div>
+					 
+					 <div class="title"> </div>
                     </div>
                 </div>
         
@@ -44,29 +51,17 @@
                     <div class="toolbar-inner">
                     <!-- Toolbar links -->
                     <input type="submit" name="inicio" id="inicio" value="Inicio" class="enlace" />
-                    <input type="submit" name="perfil" id="perfil" value="Perfil" class="enlace" />
+					<input type="submit" name="perfil" id="perfil" value="Perfil" class="enlace" />
 					<input type="submit" name="mensajes" id="mensajes" value="Mensajes" class="enlace" />
 					<input type="submit" name="configuraciones" id="configuraciones" value="Configuraciones" class="enlace" />
-					
-                    </div>
+   					</div>
                 </div>
         
                 <!-- Scrollable page content -->
                 <div id="pcimagenes" class="page-content">
-					<h1></h1>
-					<input type="submit" name="servicio" id="servicio" value="Servicios" class="botonServicio" />
-					<h1></h1>
-					<input type="submit" name="agenda" id="agenda" value="Agenda" class="botonServicio" />
-					<h4></h4>
-					<input type="submit" name="profesionalesCerca" id="profesionalesCerca" value="Profesionales" class="botonProfesional" />
-					<h4></h4>
-					
-					
-				</div>
-				
-				
-                    <!-- Link to another page -->
-                    
+					<h1>MENSAJES</h1>
+					</div>
+
                 </div>
             </div>
         </div>
@@ -74,7 +69,7 @@
     <script type="text/javascript" src="../../cordova.js"></script>
     <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="../../js/my-app.js"></script>
-	<script type="text/javascript" src="../controlador/principal.js"></script>
+	<script type="text/javascript" src="../controlador/mensajes.js"></script>
 </body>
 
 </html>
