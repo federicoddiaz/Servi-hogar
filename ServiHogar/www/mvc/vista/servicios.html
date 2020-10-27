@@ -23,58 +23,53 @@
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
+	<link rel="stylesheet" href="../../css/Navbar.css">
 	
 	 <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
 </head>
 
 <body>
-<body style="background-color:#000000; overflow:scroll;">
-    <div id="app" class="servicios">
-        <!-- Statusbar overlay -->
-        <div class="statusbar"></div>
+				<header>
+                    
+					
+					<div class="container">
+					
+					<img src="../../mvc/modelo/img/SERVIPNG.png" alt="logo" class="logo">
+					<h1 class="ServicioTitle">Servicios</h1>
+					
+					<nav>
+					<ul>
+					<li><a href="javascript: history.go(-1)"  class="botonSalir">Volver</a><li>
+                    </ul>
+					</nav>
+					
+					</div>
+                </header> 
+					
+					
 
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="home" class="page">
-
-                <!-- Top Navbar -->
-                 <div id="nbbarra" class="navbar">
-                    <div class="navbar-inner">
-                    <div class="title">Servicios</div>
-
-					 <div class="title"> </div>
-                    </div>
-                </div>
-
-               <!-- Toolbar -->
-               <div id="tbbarra" class="toolbar">
-                <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <input type="submit" name="inicio" id="inicio" value="INICIO" class="enlace" />
-                </div>
-				</div>
-
-                <!-- Scrollable page content -->
-				<div id="fondo">
                 <div id="pcimagenes" class="page-content">
 					<h1>Nuestros servicios</h1>
 
                     <p> Encontra todos los profesionales que necesitas para tu hogar </p>
 
 
-                              <figure><img src="../../images/Electristas.png" class="responsive"></figure>
-
-							<a  onclick="window.location.href='electricista.html'">Electricista</a>
-
-
-                            <figure><img src="../../images/Albañil.png" class="responsive"></figure><a>Albañil</a>
-
-                            <figure><img src="../../images/Plomero1.png" class="responsive"></figure><a>Plomero</a>
-
-                            <figure><img src="../../images/Pintores.png" class="responsive"></figure><a>Pintor</a>
-
+                              <center>
+					 <table>
+					 <tr>
+					 <td style="vertical-align:right; text-align:center"><figure><img src="../../images/Electristas.png" class="PrImg1"></figure>
+						<a  onclick="window.location.href='electricista.html'" style="color:white;">Electricistas</a></td>
+					 <td style="vertical-align:middle; text-align:center"><figure><img src="../../images/Albañil.png" class="PrImg2"></figure>
+						<a  onclick="window.location.href='albañil.html'" style="color:white;">Albañiles</a></td>
+					 <td style="vertical-align:left; text-align:center"><figure><img src="../../images/Plomero1.png" class="PrImg3"></figure>
+						<a onclick="window.location.href='plomero.html'" style="color:white;">Plomeros</a></td>
+						<td style="vertical-align:left; text-align:center"><figure><img src="../../images/Pintores.png" class="PrImg3"></figure>
+						<a onclick="window.location.href='pintores.html'" style="color:white;">Pintores</a></td>
+                     </tr>
+					 </table>
+					 </center>
 
                 </div>
 				</div>

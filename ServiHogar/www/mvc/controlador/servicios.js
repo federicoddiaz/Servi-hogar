@@ -5,9 +5,5 @@ document.getElementById('fondo').style.backgroundColor="#000000";
 document.getElementById('pcimagenes').align="center";
 
  
-$('#inicio').click(inicio);
- function inicio(){
- window.location.href='../vista/principal.html';
- }
 
 
