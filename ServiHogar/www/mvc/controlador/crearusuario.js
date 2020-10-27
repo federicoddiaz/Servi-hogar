@@ -1,22 +1,36 @@
 $('#btRegistrarse').click(Registrarse);
 function Registrarse(){
-//window.location.href='../vista/principal.html';	
-//return false;
-alert ("entre al boton");
-var usuario = $('#Usuario');
-var password = $('#Password');
-var nombre = $('#Nombre');
-var sexo = $('#Sexo');
-var direccion = $('#Direccion');
-//var fechanac = $('#Fechanac');
-alert ("tengo los datos");
-var res_agregar = agregar_usu(usuario, password, nombre, sexo, direccion);
-alert ("mande los datos");
-if (res_agregar == "2") {
+	
+	var inUsername = $('#Username');
+	var username = inUsername.val().trim();
+	inUsername.val(username);
+
+	var inPassword = $('#Password');
+	var password = inPassword.val().trim();
+	inPassword.val(password);
+
+	var inNombre = $('#Nombre');
+	var nombre = inNombre.val().trim();
+	inNombre.val(nombre);
+
+	var inSexo = $('#Sexo');
+	var sexo = inSexo.val().trim();
+	inSexo.val(sexo);
+
+	var inDireccion = $('#Direccion');
+	var direccion = inDireccion.val().trim();
+	inDireccion.val(direccion);
+
+	var inFechaNac = $('#FechaNac');
+	var fechanac = inFechaNac.val().trim();
+	inFechaNac.val(fechanac);
+
+	var res_agregar = agregar_usu(username, password, nombre, sexo, direccion, fechanac);
+	if (res_agregar == "2") {
+		alert("Usuario creado con éxito");
 		window.location.href='../vista/principal.html';	
 		return false;
 	} else {
-		 
 		alert ("Ingreso incorrecto");
 	}
-		 }
+}
