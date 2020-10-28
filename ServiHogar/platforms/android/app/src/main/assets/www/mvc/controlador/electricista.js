@@ -12,3 +12,4 @@ $('#inicio').click(inicio);
  function inicio(){
  window.location.href='../vista/principal.html';
  }
+
