@@ -108,6 +108,7 @@ function contrasena_correcta(dni, contrasena) {
 		return false;
 	}
 }
+
 function agregar_usu(usuario, password, nombre, sexo, direccion, fechaNac) {
 	var usu_nuevo = new DtoClientes();
 		usu_nuevo.setUsername = usuario;
@@ -125,6 +126,24 @@ function agregar_usu(usuario, password, nombre, sexo, direccion, fechaNac) {
 				return "4";
 		
 	}	
+}
 
-
+function agregar_pro(usuario, password, nombre, sexo, direccion, fechaNac, profesion) {
+	var usu_nuevo = new DtoProfesionales();
+		usu_nuevo.setUsername = usuario;
+		usu_nuevo.setPassword = password;
+		usu_nuevo.setNombre = nombre;
+		usu_nuevo.setSexo = sexo;
+		usu_nuevo.setDireccion = direccion;
+		usu_nuevo.setFechaNac = fechaNac;
+		usu_nuevo.setProfesion = profesion;
+		var resp_agr_usuario = "";
+		resp_agr_usuario = agregar_usuario(usu_nuevo);
+		if (resp_agr_usuario == "ok") {
+			
+				return "2";
+			} else {			
+				return "4";
+		
+	}	
 }
