@@ -14,7 +14,8 @@
 // Retorna una "se�al" con el resultado del acceso al servidor y el 
 // mismo DTO recibido como parametro con la informacion (si habia)
 //
-function leer_por_usuario(DtoProfesionales) {
+function leer_por_prof(DtoProfesionales) {
+		
 //Define la variable para responder si encontro o no el usuario
 //  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
 //  "ok" (encontro al usuario)
@@ -22,6 +23,7 @@ function leer_por_usuario(DtoProfesionales) {
 //Obtiene el username del objeto recibido como parametro	
 	username = DtoProfesionales.getUsername;
 	password = DtoProfesionales.getPassword;
+	
 //Pregunta si es vacio
 	if ( username == "" || password == "") {
 		
@@ -37,9 +39,10 @@ function leer_por_usuario(DtoProfesionales) {
 			type: 'post',
 			dataType: 'json',
 			async: false,
-			url: 'https://servi-hogar2020.000webhostapp.com/scripts/usuario_leer_por_usuario.php',
+			url: 'https://servi-hogar2020.000webhostapp.com/scripts/usuario_leer_por_prof.php',
 			success: function(respuesta) {
-				resp_leer_usuario = "ok";
+				resp_leer_usuario = respuesta['estado'];
+				
 //Completa la informacion del DTO con la respuesta del servidor	
 				DtoProfesionales.setUsername = respuesta['Username'];
 				DtoProfesionales.setPassword = respuesta['Password'];	
