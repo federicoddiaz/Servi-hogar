@@ -156,3 +156,47 @@ function agregar_pro(DtoProfesionales) {
 	});
 	return resp_agre_usuario;
 }
+
+function busca_prof(profe, arreglo_profesionales) {
+	//Define la variable para responder si encontro o no el usuario
+	//  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
+	//  "ok" (encontro al usuario)
+	var resp_leer_profesion = "";
+	//Arma el "post" para enviarlo por ajax
+	var parametros = {
+		"Profesion" : profe,
+	};
+	//Invoca a la url donde se encuentra el archivo "usuario_leer_por_usuario.php"
+	$.ajax({
+		data: parametros,
+		type: 'post',
+		dataType: 'json',
+		async: false,
+		url: 'https://servi-hogar2020.000webhostapp.com/leer_profesionales.php',
+		success: function(respuesta) {
+			respuestaRecibida(respuesta, arreglo_profesionales);
+			resp_leer_profesion = respuesta[0]['estado'];
+		},
+		error: function(jqXHR, textStatus, errorMessage) {
+			respuestaNoRecibida(jqXHR, textStatus);
+			resp_leer_profesion = "er";			
+		}
+	});
+return resp_leer_profesion;
+}
+
+//Funcion que se ejecuta si recibio respuesta del servidor, haya encontrado o no roles.
+//
+//Recibe como parametros la respuesta del servidor (formato json) y el arreglo donde
+//debe cargar (con formato "DTO") cada uno de los roles recibidos	
+//
+function respuestaRecibida(respuesta, arreglo_profesionales){
+	//Recorre con un "for" la respuesta, crea para cada fila un "DTO",
+	//le asigna la informacion recibida y finalmente agrega el dto al arreglo
+	for (i in respuesta) {
+		var dtoProf = new DtoProfesionales();
+		dtoProf.setNombre = respuesta[i]['Nombre'];
+		dtoProf.setDireccion = respuesta[i]['Direccion'];
+		arreglo_profesionales[i] = dtoProf;
+		}	
+}
