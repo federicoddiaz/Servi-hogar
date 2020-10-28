@@ -1,6 +1,14 @@
+$('#btRegistrarseCliente').click(Como Cliente);
+function Como Cliente(){
+window.location.href='../vista/usuariocliente.html';	
+	
+$('#btRegistrarseProfesional').click(Como Profesional);
+function Como Profesional(){	
+window.location.href='../vista/usuarioprofesional.html';
+
 $('#btRegistrarse').click(Registrarse);
 function Registrarse(){
-	
+		
 	var inUsername = $('#Username');
 	var username = inUsername.val().trim();
 	inUsername.val(username);
