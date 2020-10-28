@@ -1,3 +1,19 @@
+h1{
+color: white;
+ position:center;
+ font-size:20px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;	
+}
+
+p{
+ color: white;
+ position:center;
+ font-size:16px;
+ font-family:Verdana,Helvetica;
+ font-weight:bold;
+ 
+}
 
 .perfil {
     background: rgba(0,0,0,0.0);
@@ -19,6 +35,22 @@
     background: rgba(0,0,0,0.0);
     max-width: 375px;
     height: 997px;
+	overflow: visible;
+    width: 100%;
+    margin: 48px auto;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+	
+
+	box-shadow:7px 10px 25px #000;
+  border-color: white;
+}
+
+.servicios {
+    background: rgba(0,0,0,0.0);
+    max-width: 375px;
+    height: 925px;
 	overflow: visible;
     width: 100%;
     margin: 48px auto;
@@ -118,6 +150,7 @@ input.botonContrataciones:hover{
  color:#ffffff;
  cursor:pointer;
  }
+
 
 p.azul {
  color: blue;
@@ -245,4 +278,4 @@ input[type="text"] {
   border: 2px solid #0075d9;
   width: 40%;
   height: auto;
-}
+  }

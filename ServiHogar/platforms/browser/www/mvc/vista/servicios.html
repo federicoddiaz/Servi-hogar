@@ -28,94 +28,63 @@
 </head>
 
 <body>
-    <div id="app">
+<body style="background-color:#000000; overflow:scroll;">
+    <div id="app" class="servicios">
         <!-- Statusbar overlay -->
         <div class="statusbar"></div>
-    
+
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="home" class="page">
-    
+
                 <!-- Top Navbar -->
                  <div id="nbbarra" class="navbar">
                     <div class="navbar-inner">
                     <div class="title">Servicios</div>
-					 
+
 					 <div class="title"> </div>
                     </div>
                 </div>
-        
+
                <!-- Toolbar -->
                <div id="tbbarra" class="toolbar">
                 <div class="toolbar-inner">
                 <!-- Toolbar links -->
-                <input type="submit" name="inicio" id="inicio" value="Inicio" class="enlace" />
+                <input type="submit" name="inicio" id="inicio" value="INICIO" class="enlace" />
                 </div>
-               </div>
-        
+				</div>
+
                 <!-- Scrollable page content -->
+				<div id="fondo">
                 <div id="pcimagenes" class="page-content">
 					<h1>Nuestros servicios</h1>
-                    
+
                     <p> Encontra todos los profesionales que necesitas para tu hogar </p>
-                    
-                    <div class="container-fluid content-row"> 
-                        <div class="row"> 
-                         <div class="col-sm-12 col-lg-6"> 
-                          <div class="card h-100"> 
-                              <figure><img src="../../images/electrical--v1.png_" class="img-responsive" alt=""></figure>
-                            
-                              <a  onclick="window.location.href='electricista.html'">Electricista</a>
-                          </div>
-                    </div>
-                        </div>
-                    </div>
-                 
-                        
-                 <div class="container-fluid content-row"> 
-                    <div class="row"> 
-                     <div class="col-sm-12 col-lg-6"> 
-                      <div class="card h-100">
-                            <figure><img src="../../images/albañil.png_" class="img-responsive" alt=""></figure><a>Albañil</a> 
-                        </div> 
-                                    </div>
-                                </div>
-                       
-                    
-                        <div class="container-fluid content-row"> 
-                            <div class="row"> 
-                             <div class="col-sm-12 col-lg-6"> 
-                              <div class="card h-100">
-                                                      
-                                <figure><img src="../../images/plomero.png" class="img-responsive" alt=""></figure><a>Plomero</a> 
-                               
-                          </div> 
-                                </div>
-                            </div>
-                     
-                              
-                        <div class="container-fluid content-row"> 
-                            <div class="row"> 
-                             <div class="col-sm-12 col-lg-6"> 
-                              <div class="card h-100">
-                        
-                                    <figure><img src="../../images/pintor.png" class="img-responsive" alt=""></figure><a>Pintor</a> 
-                                  </div> 
-                                    </div>
-                                </div>
-                               </div>
-                    </div>
+
+
+                              <figure><img src="../../images/Electristas.png" class="responsive"></figure>
+
+							<a  onclick="window.location.href='electricista.html'">Electricista</a>
+
+
+                            <figure><img src="../../images/Albañil.png" class="responsive"></figure><a>Albañil</a>
+
+                            <figure><img src="../../images/Plomero1.png" class="responsive"></figure><a>Plomero</a>
+
+                            <figure><img src="../../images/Pintores.png" class="responsive"></figure><a>Pintor</a>
+
+
                 </div>
+				</div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="../../cordova.js"></script>
     <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="../../js/my-app.js"></script>
-    <script type="text/javascript" src="../controlador/servicios.js"></script>
-    <script type="text/javascript" src="../controlador/electricista.js"></script>
-   
+	<script type="text/javascript" src="../controlador/servicios.js"></script>
+	<script type="text/javascript" src="../controlador/principal.js"></script>
 </body>
 
 </html>
