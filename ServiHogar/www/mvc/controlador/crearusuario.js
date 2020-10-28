@@ -1,10 +1,14 @@
-$('#btRegistrarseCliente').click(Como Cliente);
-function Como Cliente(){
-window.location.href='../vista/usuariocliente.html';	
+$('#btRegistrarseCliente').click(ComoCliente);
+function ComoCliente(){
+	window.location.href='../vista/usuariocliente.html';
+	return false;
+}
 	
-$('#btRegistrarseProfesional').click(Como Profesional);
-function Como Profesional(){	
-window.location.href='../vista/usuarioprofesional.html';
+$('#btRegistrarseProfesional').click(ComoProfesional);
+function ComoProfesional(){	
+	window.location.href='../vista/usuarioprofesional.html';
+	return false;
+}
 
 $('#btRegistrarse').click(Registrarse);
 function Registrarse(){
