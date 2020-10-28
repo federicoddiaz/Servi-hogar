@@ -6,20 +6,7 @@
 
 //Crea una variable global, instancia de DtoClientes
 var usu_ingreso = new DtoClientes();
-
-// Funcion destinada a validar los datos ingresados, verificar
-// si la contraseña es correcta y en caso de ser valida debe
-// mostrar el menu del sistema.
-//
-// Recibe como parametro el username y el password
-//
-// Retorna un dato de tipo string con el valor "1" si los datos 
-// no eran correctos, 
-// "3" si esta permitido ingresar al menu del sistema y "4" si
-// se produjo error de conexion
-//
 function validar_ingreso(username, password) {
-
 //Asigna el username y el password recibido como parametro al objeto creado	
 	usu_ingreso.setUsername = username;
 	usu_ingreso.setPassword = password;
@@ -45,4 +32,29 @@ function validar_ingreso(username, password) {
 			return "2";
 			}
 		}
-	}	
+	}
+
+var prof_ingreso= new DtoProfesionales();
+function validar_ingreso_prof(username, password) {
+	prof_ingreso.setUsername = username;
+	prof_ingreso.setPassword = password;
+
+	var resp_prof = "";
+	resp_prof = leer_por_prof(prof_ingreso);
+	
+	if (resp_prof == "ok") {
+		return "2";
+	}
+//Si no se pudo conectar retorna "1"
+	if (resp_prof != "ok") {
+		return "1";
+		
+	} else {
+//Si la contraseña ingresada esta vacia o es distinta a la de la tabla retorna "1"
+		if (password == "" || password != prof_ingreso.getPassword) {
+			return "1";
+		} 
+	}
+}
+
+	
