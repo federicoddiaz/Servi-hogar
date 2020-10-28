@@ -35,14 +35,13 @@ function validar_ingreso(username, password) {
 //Si no se pudo conectar retorna "1"
 	if (resp_leer_usuario != "ok") {
 		return "1";
-		
 	} else {
 //Si la contraseña ingresada esta vacia o es distinta a la de la tabla retorna "1"
-		if (password == "" || password != usu_ingreso.getPassword) {
+		if (password == "" || sha256(password) != usu_ingreso.getpassword) {
 			return "1";
 		} else {
-//Si esta todo bien retorna "2"				
-			return "2";
+//Si esta todo bien retorna "2"
+				return "2";
 			}
 		}
 	}	

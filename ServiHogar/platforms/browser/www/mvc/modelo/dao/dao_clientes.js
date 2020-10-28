@@ -37,16 +37,18 @@ function leer_por_usuario(dtoClientes) {
 			type: 'post',
 			dataType: 'json',
 			async: false,
-			url: 'https://servi-hogar2020.000webhostapp.com/scripts/usuario_leer_por_usuario.php',
+			url: 'https://servi-hogar2020.000webhostapp.com/usuario_leer_por_usuario.php',
 			success: function(respuesta) {
-				resp_leer_usuario = "ok";
+				alert("Success");
+				//resp_leer_usuario = respuesta['estado'];
 //Completa la informacion del DTO con la respuesta del servidor	
-				dtoClientes.setUsername = respuesta['Username'];
-				dtoClientes.setPassword = respuesta['Password'];	
+				//dtoClientes.setUsername = respuesta['Username'];
+				//dtoClientes.setPassword = respuesta['Password'];	
 			},
 			error: function(jqXHR, textStatus, errorMessage) {
-				respuestaNoRecibida(jqXHR, textStatus);
-				resp_leer_usuario = "er";				
+				alert("Error DAO");
+				//respuestaNoRecibida(jqXHR, textStatus);
+				//resp_leer_usuario = "er";				
 			}
 		});
 	}
