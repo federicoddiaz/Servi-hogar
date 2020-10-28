@@ -13,7 +13,9 @@
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
+	<link rel="stylesheet" href="../../css/Navbar.css">
 	<link rel="stylesheet" href="../../jquery/jquery.mobile-1.4.5.min.css">
 	<script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="../../jquery/jquery-3.1.1.min.js"></script>
@@ -21,53 +23,41 @@
 </head>
 
 <body>
-    <div id="app">
-        <!-- Statusbar overlay -->
-        <div class="statusbar"></div>
-    
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="home" class="page">
-    
-                <!-- Top Navbar -->
-                <div id="nbbarra" class="navbar">
-                    <div class="navbar-inner">
-                    <div class="title">Servi Hogar</div>
-					<input type="submit" name="btsalir" id="btsalir" value="Salir" class="boton" />
-					<div class="title"> </div>
-                    </div>
-                </div>
-        
-                <!-- Toolbar -->
-                <div id="tbbarra" class="toolbar">
-                    <div class="toolbar-inner">
-                    <!-- Toolbar links -->
-                    <input type="submit" name="inicio" id="inicio" value="Inicio" class="enlace" />
-                    <input type="submit" name="perfil" id="perfil" value="Perfil" class="enlace" />
-					<input type="submit" name="mensajes" id="mensajes" value="Mensajes" class="enlace" />
-					<input type="submit" name="configuraciones" id="configuraciones" value="Configuraciones" class="enlace" />
+				
+				<header>
+                    <div class="container">
 					
-                    </div>
-                </div>
-        
+					<img src="../../mvc/modelo/img/SERVIPNG.png" alt="logo" class="logo">
+					
+					<nav>
+					<ul>
+					<li><a onclick="window.location.href='principalperfil.html'"style="color:white;">Perfil</a><li>
+					<input type="submit" name="btsalir" id="btsalir" value="Salir" class="botonSalir" />
+					</ul>
+					</nav>
+					
+					</div>
+                </header>   
+                
+                
                 <!-- Scrollable page content -->
-                <div id="pcimagenes" class="page-content">
-					<h1></h1>
-					<input type="submit" name="servicio" id="servicio" value="Servicios" class="botonServicio" />
-					<h1></h1>
-					<input type="submit" name="agenda" id="agenda" value="Agenda" class="botonServicio" />
-					<h4></h4>
-					<input type="submit" name="profesionalesCerca" id="profesionalesCerca" value="Profesionales" class="botonProfesional" />
-					<h4></h4>
+				<div id="pcimagenes" class="page-content">
+					 <center>
+					 <table>
+					 <tr>
+					 <td style="vertical-align:right; text-align:center"><figure><img src="../../images/Servicios.png" class="PrImg1"></figure>
+						<a  onclick="window.location.href='servicios.html'" style="color:white;">Servicios</a></td>
+					 <td style="vertical-align:middle; text-align:center"><figure><img src="../../images/Contratacion.png" class="PrImg2"></figure>
+						<a  onclick="window.location.href='contrataciones.html'" style="color:white;">Contrataciones</a></td>
+					 <td style="vertical-align:left; text-align:center"><figure><img src="../../images/Profesionales.png" class="PrImg3"></figure>
+						<a onclick="window.location.href='profesionales.html'" style="color:white;">Profesionales</a></td>
+                     </tr>
+					 </table>
+					 </center>       			
 					
-					
-				</div>
-				
-				
-                    <!-- Link to another page -->
-                    
+								                  
                 </div>
+				
             </div>
         </div>
     </div>

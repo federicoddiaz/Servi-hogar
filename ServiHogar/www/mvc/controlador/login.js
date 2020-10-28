@@ -11,14 +11,21 @@ function Ingresar(){
 	var inPassword = $('#Password');
 	var password = inPassword.val().trim();
 	inPassword.val(password);
-	var res_validar_ingreso = validar_ingreso(username, password);
-	if (res_validar_ingreso == "1") {
-		alert ("Ingreso incorrecto");
-	} else {
-		if (res_validar_ingreso == "2") {
-			window.location.href='../vista/principal.html';
+	
+	var res_validar_ingreso = validar_ingreso(username, password);	
+	if (res_validar_ingreso == "2") {
+		window.location.href='../vista/principal.html';
+			return false;
+		} 
+	
+	var res_validar_ingreso_prof = validar_ingreso_prof(username, password);
+	if (res_validar_ingreso_prof == "2") {		
+		window.location.href='../vista/principal.html';
+			return false;
 		} else {
-			alert ("ERROR!!!!" + res_validar_ingreso);
+			if(res_validar_ingreso_prof== "1"){
+				alert("Usuario no encontrado");
+			}
 		}
-	}
+	
 }

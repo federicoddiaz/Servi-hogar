@@ -14,17 +14,17 @@
 // Retorna una "se�al" con el resultado del acceso al servidor y el 
 // mismo DTO recibido como parametro con la informacion (si habia)
 //
-function leer_por_usuario(dtoClientes) {
+function leer_por_usuario(DtoClientes) {
 //Define la variable para responder si encontro o no el usuario
 //  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
 //  "ok" (encontro al usuario)
 	var resp_leer_usuario = "";
 //Obtiene el username del objeto recibido como parametro	
-	username = dtoClientes.getUsername;
-	password = dtoClientes.getPassword;
+	username = DtoClientes.getUsername;
+	password = DtoClientes.getPassword;
 //Pregunta si es vacio
-	if ( username == "" || password == "") { 
-		alert("Entro al if");
+	if ( username == "" || password == "") {
+		
     }else{ 
 //Arma el "post" para enviarlo por ajax
 		var parametros = {
@@ -41,8 +41,8 @@ function leer_por_usuario(dtoClientes) {
 			success: function(respuesta) {
 				resp_leer_usuario = "ok";
 //Completa la informacion del DTO con la respuesta del servidor	
-				dtoClientes.setUsername = respuesta['Username'];
-				dtoClientes.setPassword = respuesta['Password'];	
+				DtoClientes.setUsername = respuesta['Username'];
+				DtoClientes.setPassword = respuesta['Password'];	
 			},
 			error: function(jqXHR, textStatus, errorMessage) {
 				respuestaNoRecibida(jqXHR, textStatus);
@@ -71,7 +71,7 @@ function respuestaNoRecibida(jqXHR, textStatus){
 //
 // Retorna una "se�al" con el resultado del acceso al servidor
 //
-function modif_por_id(dtoClientes) {
+function modif_por_id(DtoClientes) {
 //Define la variable para responder si encontró o no el usuario
 //  Los valores posibles son "er" (error de conexion), "" (no modifico el usuario),
 //  "ok" (modifico los datos del usuario)
@@ -79,9 +79,9 @@ function modif_por_id(dtoClientes) {
 
 //Arma el "post" para enviarlo por ajax
 	var parametros = {
-		"Id" : dtoClientes.getId,
-		"Nombre" : dtoClientes.getNombre,
-		"Contrasena" : dtoClientes.getContrasena,
+		"Id" : DtoClientes.getId,
+		"Nombre" : DtoClientes.getNombre,
+		"Contrasena" : DtoClientes.getContrasena,
 	};
 
 //Invoca a la url donde se encuentra el archivo "usuario_modif_por_id.php"
@@ -110,17 +110,28 @@ function modif_por_id(dtoClientes) {
 //
 // Retorna una "se�al" con el resultado del acceso al servidor
 //
-function agregar_usuario(dtoClientes) {
+function agregar_usuario(DtoClientes) {
+	//alert ("llegue a dao");
 //Define la variable para responder si encontró o no el usuario
 //  Los valores posibles son "er" (error de conexion), "" (no agrego el usuario),
 //  "ok" (agrego el usuario)
 	var resp_agre_usuario = "";
 
+	nombre = DtoClientes.getNombre;
+	username = DtoClientes.getUsername;
+	password = DtoClientes.getPassword;
+	direccion = DtoClientes.getDireccion;
+	sexo = DtoClientes.getSexo;
+	fechanac = DtoClientes.getFechaNac;
+
 //Arma el "post" para enviarlo por ajax
 	var parametros = {
-		"Dni" : dtoClientes.getDni,
-		"Nombre" : dtoClientes.getNombre,
-		"Contrasena" : dtoClientes.getContrasena,
+		"Nombre" : nombre,
+		"Username" : username,
+		"Password" : password,
+		"Direccion" : direccion,
+		"Sexo" : sexo,
+		"FechaNac" : fechanac,
 	};
 //Invoca a la url donde se encuentra el archivo "usuario_agregar.php"
 	$.ajax({
@@ -128,16 +139,15 @@ function agregar_usuario(dtoClientes) {
 		type: 'post',
 		dataType: 'json',
 		async: false,
-		url: 'https://iestsdsids2.000webhostapp.com/Usuarios/usuario_agregar.php',
+		url: 'https://servi-hogar2020.000webhostapp.com/usuario_agregar.php',
 		success: function(respuesta) {
-			resp_agre_usuario = respuesta['estado'];
-			dtoClientes.setId = respuesta['idUsuarioNuevo'];
+			resp_agre_usuario = "ok";
+			//DtoClientes.setId = respuesta['idUsuarioNuevo'];
 		},
 		error: function(jqXHR, textStatus, errorMessage) {
 			respuestaNoRecibida(jqXHR, textStatus);	
 			resp_agre_usuario = "er";
 		}
 	});
-	
 	return resp_agre_usuario;
 }

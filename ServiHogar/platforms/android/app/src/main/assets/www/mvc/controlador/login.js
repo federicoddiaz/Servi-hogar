@@ -13,10 +13,11 @@ function Ingresar(){
 	inPassword.val(password);
 	var res_validar_ingreso = validar_ingreso(username, password);
 	if (res_validar_ingreso == "1") {
-	alert ("Ingreso incorrecto");
+		alert ("Ingreso incorrecto");
 	} else {
 		if (res_validar_ingreso == "2") {
 			window.location.href='../vista/principal.html';
+			return false;
 		} else {
 			alert ("ERROR!!!!" + res_validar_ingreso);
 		}

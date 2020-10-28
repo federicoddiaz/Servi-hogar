@@ -1,40 +1,9 @@
 //
 // Logica de negocio correspondiente a la ventana "agregar usuario".
 // Su funcion es la de nexo entre el controlador y las daos. 
-// 
-
-// Funcion destinada a obtener los roles para los cuales esta autorizado
-// a agregar usuario.
-//
-// Recibe como parametro el nivel del rol propio (del usuario que ingresa
-// a agregar uno nuevo) y un arreglo vacio para llenar con los roles 
-// que se encuentra autorizado a crear usuarios
-//
-// Retorna un dato de tipo string con el valor "2" si encontro roles,
-// "1" si no los encontro o con "4" si se produjo un error. Si encontro
-// retorna el arreglo con los roles disponibles
-//
-function obtenerRolesDisponibles(rolNivel, arreglo_roles_disponibles) {
-//Define una variable para recibir la respuesta de la lectura	
-	var resp_leer_roles = "";
-//Llama a la "dao" para que acceda al webservice 
-//Envia el nivel del rol mas uno y el objeto de tipo Array como parametro y recibe una String
-	nivelEnvio = parseInt(rolNivel, 10) + 1;
-	resp_leer_roles = leer_roles_por_nivel(nivelEnvio, arreglo_roles_disponibles);
-//Si no se pudo conectar retorna "4"
-	if (resp_leer_roles == "er") {
-		return "4";
-	}	
-//Si no se pudo leer retorna "1"
-	if (resp_leer_roles != "ok") {
-		return "1";
-	} else {
-		return "2";
-	}	
-}	
 
 // Funcion destinada a validar los datos ingresados, verificar
-// si la contraseña es correcta y en caso de todo estar
+// si la contraseï¿½a es correcta y en caso de todo estar
 // de acuerdo a la logica de negocio establecida agrega el usuario.
 //
 // Recibe como parametro el dni, contrasena, dni_nuevo y idRol
@@ -56,7 +25,7 @@ function validar_ingreso(dni, contrasena, dni_nuevo, idRol) {
 	if (!dni_valido(dni_nuevo)) {
 		datos_correctos = false;
 	}
-//Contraseña del usuario actual no valida
+//Contraseï¿½a del usuario actual no valida
 	if (!contrasena_correcta(dni, contrasena)) {
 		datos_correctos = false;
 	}
@@ -116,10 +85,10 @@ function dni_valido(dni) {
 	return true;
 }	
 
-// Funcion destinada a validar si la contraseña ingresada es correcta. 
+// Funcion destinada a validar si la contraseï¿½a ingresada es correcta. 
 // Para esto debe ser igual a la almacenada en la base de datos para ese usuario
 //
-// Recibe como parametro el dni y la contraseña a validar
+// Recibe como parametro el dni y la contraseï¿½a a validar
 //
 // Retorna un dato de tipo boolean en true si es correcta o en false
 // si no lo es. 
@@ -132,11 +101,49 @@ function contrasena_correcta(dni, contrasena) {
 //Llama a la "dao" para que acceda al webservice 
 //Envia el objeto de tipo DtoUsuario como parametro y recibe una String
 	resp_leer_usuario = leer_por_dni(usu_ingresa);
-//Si leyo y la contraseña es correcta retorna true
+//Si leyo y la contraseï¿½a es correcta retorna true
 	if (resp_leer_usuario == "ok" && sha256(contrasena) == usu_ingresa.getContrasena) {
 		return true;
 	} else {
 		return false;
 	}
 }
-	
+
+function agregar_usu(usuario, password, nombre, sexo, direccion, fechaNac) {
+	var usu_nuevo = new DtoClientes();
+		usu_nuevo.setUsername = usuario;
+		usu_nuevo.setPassword = password;
+		usu_nuevo.setNombre = nombre;
+		usu_nuevo.setSexo = sexo;
+		usu_nuevo.setDireccion = direccion;
+		usu_nuevo.setFechaNac = fechaNac;
+		var resp_agr_usuario = "";
+		resp_agr_usuario = agregar_usuario(usu_nuevo);
+		if (resp_agr_usuario == "ok") {
+			
+				return "2";
+			} else {			
+				return "4";
+		
+	}	
+}
+
+function agregar_pro(usuario, password, nombre, sexo, direccion, fechaNac, profesion) {
+	var usu_nuevo = new DtoProfesionales();
+		usu_nuevo.setUsername = usuario;
+		usu_nuevo.setPassword = password;
+		usu_nuevo.setNombre = nombre;
+		usu_nuevo.setSexo = sexo;
+		usu_nuevo.setDireccion = direccion;
+		usu_nuevo.setFechaNac = fechaNac;
+		usu_nuevo.setProfesion = profesion;
+		var resp_agr_usuario = "";
+		resp_agr_usuario = agregar_usuario(usu_nuevo);
+		if (resp_agr_usuario == "ok") {
+			
+				return "2";
+			} else {			
+				return "4";
+		
+	}	
+}
