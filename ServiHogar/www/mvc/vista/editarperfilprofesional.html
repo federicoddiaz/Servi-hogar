@@ -23,63 +23,59 @@
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
+	<link rel="stylesheet" href="../../css/Navbar.css">
 
     <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
 </head>
 
 <body>
-<body style="background-color:#000000; overflow:scroll;">
-    <div id="app" class= "editarperfil">
-	
- 
-        <div class="statusbar"></div>
-
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="home" class="page">
-
-                <!-- Top Navbar -->
-                <div id="nbbarra" class="navbar">
-                    <div class="navbar-inner">
-                    <div class="title">Editar Perfil</div>
-                    <div class="title"> </div>
+<body>
+				<header>
+                    
+					
+					<div class="container">
+					
+					<img src="../../mvc/modelo/img/SERVIPNG.png" alt="logo" class="logo">
+					<h1 class="ServicioTitle">Editar Perfil</h1>
+					
+					<nav>
+					<ul>
+					<li><a href="javascript: history.go(-1)"  class="botonSalir">Volver</a><li>
+                    </ul>
+					</nav>
+					
 					</div>
-                </div>
-
-                <!-- Toolbar -->
-                <div id="tbbarra" class="toolbar">
-                    <div class="toolbar-inner">
-					<input type="submit" name="Inicio" id="inicio" value="INICIO" class="enlace" />
-					<input type="submit" name="Perfil" id="perfil" value="PERFIL" class="enlace" />
-					<input type="submit" name="Mensajes" id="mensajes" value="MENSAJES" class="enlace" />
-					<input type="submit" name="Configuraciones" id="configuraciones" value="CONFIGURACIONES" class="enlace" />
-                    <!-- Toolbar links -->
+                </header> 
 					
-                    </div>
-                </div>
-
-                <!-- Scrollable page content -->
-				<div id="fondo">
+					
 				<div id="pcimagenes" class="page-content">
-					<p class="perfilusuario">EDITAR PERFIL</p>
-					<img alt="PerfilUsuario" src="../../mvc/modelo/imagenes/fotoperfil.png" class="responsive">
-					<h4></h4>
-                    <input type="submit" name="FotoPerfil" id="fotoperfil" value="Cambiar foto de perfil" class="enlace2" />
-					<p class="mail">Nombre:</p>
+				
+				     <center>
+					 <table>
+					 
+					 <tr>
+					<td style="vertical-align:left; text-align:center;"><figure><img src="../../images/Perfil.png" class="PrImg1"></figure>
+					 <a  onclick="window.location.href='.html'" style="color:white;">Cambiar foto de perfil</a></td>
+					 
+						
+					<td style="vertical-align:left; text-align:center; padding: 80px;"><p class="edad">Nombre y apellido</p>
 					<input type="text" name="textbox" class="textbox">
-                    <p class="mail">Email:</p>
+					<p class="edad">Profesión:</p>
+					<input type="text" name="textbox" class="textbox"></td>
+                    <td style="vertical-align:left; text-align:center; padding: 0px 0px 0px 0px;"><p class="edad">Fecha nacimiento:</p>
 					<input type="text" name="textbox" class="textbox">
-					<p class="mail">Fecha nacimiento:</p>
+					<p class="edad">Sexo:</p>
+					<input type="text" name="textbox" class="textbox"></td>
+					<td style="vertical-align:left; text-align:center; padding: 0px 80px 100px 80px;"><p class="edad">Dirección:</p>
 					<input type="text" name="textbox" class="textbox">
-					<p class="mail">Sexo:</p>
-					<input type="text" name="textbox" class="textbox">
-					<p class="mail">Número de teléfono:</p>
-					<input type="text" name="textbox" class="textbox">
-										
-					<input type="submit" name="btguardarc" id="btguardarc" value="Guardar Cambios" class="boton1" />
-					
+					<input type="submit" style="color:white" name="btguardarc" id="btguardarc" value="Guardar Cambios" class="GuardarCambios">
+					</td>
+					</tr>
+				    </center>
+					 
+					</table>
                                        
                 </div>
             </div>
