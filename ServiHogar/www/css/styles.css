@@ -315,5 +315,37 @@ input[type="text"] {
   
   }
   
+  .AImg {
+  padding-top: 80px;
+  display: inline-block;
+  width: 60%;
+  height: auto;
+  text-align:center;
+  
+  }
+  
+.card {
+   	padding-top: 100px;
+    display: inline-block;
+    color: #0075d9;
+	background-color:#848484;
+	border-radius: 20px;
+	border: 2px solid #0075d9;
+	width: 500px;
+	height: auto;
+	padding: 3px 3px 3px 3px;
+	text-align:center;
+
+  }
+ 
+.card_container{
+	padding: 30px 30px 30px 30px;
+}
+
+
+
+  
+ 
+  
   
  

@@ -112,4 +112,14 @@ input.GuardarCambios{
   cursor:pointer;
 }
 
+.pelect{
+	color: white;
+	text-decoration: none;
+	font-size:18px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	color: #0075d9;
+	border-radius:20px;
+	
+}
 	
