@@ -128,7 +128,7 @@ function agregar_usu(usuario, password, nombre, sexo, direccion, fechaNac) {
 	}	
 }
 
-function agregar_pro(usuario, password, nombre, sexo, direccion, fechaNac, profesion) {
+function agregar_prof(usuario, password, nombre, sexo, direccion, fechaNac, profesion) {
 	var usu_nuevo = new DtoProfesionales();
 		usu_nuevo.setUsername = usuario;
 		usu_nuevo.setPassword = password;
@@ -138,9 +138,8 @@ function agregar_pro(usuario, password, nombre, sexo, direccion, fechaNac, profe
 		usu_nuevo.setFechaNac = fechaNac;
 		usu_nuevo.setProfesion = profesion;
 		var resp_agr_usuario = "";
-		resp_agr_usuario = agregar_usuario(usu_nuevo);
+		resp_agr_usuario = agregar_pro(usu_nuevo);
 		if (resp_agr_usuario == "ok") {
-			
 				return "2";
 			} else {			
 				return "4";
