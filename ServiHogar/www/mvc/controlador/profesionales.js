@@ -46,6 +46,7 @@ function agregarProf(nombre, direccion) {
 	p2.innerHTML = direccion; 
     li.appendChild(p2);
     p2 = document.createElement("button");
+    p2.setAttribute("id","btnContratar");
     p2.innerHTML = "Contratar";
     li.appendChild(p2);
 }
