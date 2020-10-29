@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -13,47 +23,49 @@
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="../../lib/framework7/css/framework7.min.css">
     <!-- Path to your custom app styles-->
-	<link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/style-elec.css">
-	<script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="../../jquery/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+	<link rel="stylesheet" href="../../css/Navbar.css">
+	<link rel="stylesheet" href="../../css/style-elec.css">
+	 <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
 </head>
 
-<body onload="cargarDatos('Electricista')">
-    <div id="app">
-        <!-- Statusbar overlay -->
-        <div class="statusbar"></div>
-    
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="home" class="page">
-    
-                <!-- Top Navbar -->
-                <div id="nbbarra" class="navbar">
-                    <div class="navbar-inner">
-                    <div class="title">Servicios</div>
+<body>
+				<header>
+                    
 					
-					<div class="title"> </div>
-                    </div>
-                </div>
-        
-                <!-- Toolbar -->
-                <div id="tbbarra" class="toolbar">
-                    <div class="toolbar-inner">
-                        <!-- Toolbar links -->
-                        <input type="submit" name="inicio" id="inicio" value="Inicio" class="enlace" />
-                        <input type="submit" name="servicios" id="servicios" value="Servicios" class="enlace" />
-                    </div>
-                </div>
-
-                <!-- Scrollable page content -->
+					<div class="container">
+					
+					<img src="../../mvc/modelo/img/SERVIPNG.png" alt="logo" class="logo">
+					<h1 class="ServicioTitle">Servicios</h1>
+					
+					<nav>
+					<ul>
+					<li><a href="javascript: history.go(-1)"  class="botonSalir">Volver</a><li>
+                    </ul>
+					</nav>
+					
+					</div>
+                </header> 
+								
+                <!-- Scrollable page content/Usa el style-elec-->
                 <div id="pcimagenes" class="page-content">
 					<h1>Electricistas</h1>
                 <div class="container">
                     <div class="card container" id="profesionales"></div>
                 </div> 
+					<h3>Pocho Perez</h3>
+					<h4>Primera junta 3355</h4>
+					<h4>Aca deberia ir la clasificacion</h4>
+					<h4>Aca el boton contratar</h4>
+					 <div class="container">
+                    <div class="card container" id="profesionales"></div>
+					
+
+                   
+
+                              <center>
+				
             </div>
         </div>
     </div>

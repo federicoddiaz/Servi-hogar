@@ -36,5 +36,20 @@
   }
 
 h1 {
-  color: black;
+ text-align: center;
+  color: white;
+}
+
+h3 {
+ text-align: center;	
+  color: white;
+}
+
+h4 {
+text-align: center;	
+  color: white;
+}
+
+p {
+	color:black;
 }
