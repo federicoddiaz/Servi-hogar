@@ -6,6 +6,7 @@
   
   #form p {
     text-align: center;
+    color: black;
   }
   
   #form label {
@@ -33,3 +34,7 @@
   input[type="radio"]:checked ~ label {
     color: orange;
   }
+
+h1 {
+  color: black;
+}

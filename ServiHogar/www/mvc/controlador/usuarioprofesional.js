@@ -29,7 +29,7 @@ function Registrarse(){
 	var profesion = inProfesion.val().trim();
 	inProfesion.val(profesion);
 
-	var res_agregar = agregar_pro(username, password, nombre, sexo, direccion, fechanac, profesion);
+	var res_agregar = agregar_prof(username, password, nombre, sexo, direccion, fechanac, profesion);
 	if (res_agregar == "2") {
 		alert("Usuario creado con éxito");
 		window.location.href='../vista/principalprofesional.html';	
