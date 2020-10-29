@@ -26,9 +26,7 @@
     unicode-bidi: bidi-override;
   }
   
-  label:hover,
-  label:hover ~ label {
-    color: orange;
+ 
   }
   
   input[type="radio"]:checked ~ label {
@@ -53,4 +51,38 @@ text-align: center;
 p {
 	color:white;
 }
+
+label {
+  color:white;
+}
+#fecha {
+  background: white;
+  font-size: 30px;
+  border-radius: 15px;
+}
+
+#descripcion {
+  background:white ;
+  font-size: 90px;
+  border-radius: 15px;
+  
+}
+
+#btContratar {
+  text-decoration: none;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: helvetica;
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
+  color: white;
+  background-color:#0075d9;;
+  border-radius: 15px;
+  border: 3px double #0075d9;;
+}
+
+label {
+ font-size: 20px;
 
