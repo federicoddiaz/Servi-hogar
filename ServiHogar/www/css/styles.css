@@ -342,7 +342,66 @@ input[type="text"] {
 	padding: 30px 30px 30px 30px;
 }
 
+.ui-btn{
+	color: white;
+	text-decoration: none;
+	font-size:18px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	color: #0075d9;
+	background-color:transparent;
+	border-radius: 20px;
+	border: 1px solid #0075d9;
+	width: 20%;
+	height: auto;
+	padding: 5px 5px 5px 5px;
+	position: relative;
+	float:right;
+	
+}
 
+.ui-btn:hover{
+  cursor:pointer;
+}
+
+.descripcion {
+	color: white;
+	text-decoration: none;
+	font-size:18px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	background-color:transparent;
+	border-radius: 20px;
+	border: 1px solid #0075d9;
+	width: 500px;
+	height: 300px;
+	padding: 20px 20px 20px 20px; 
+  padding-top: 20px;
+  
+	  
+  }
+
+  input.btContratar{
+    color: white;
+    text-decoration: none;
+    font-size:18px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    color: #0075d9;
+    background-color:transparent;
+    border-radius: 20px;
+    border: 1px solid #0075d9;
+    width: 20%;
+    height: auto;
+    padding: 5px 5px 5px 5px;
+    position: relative;
+    float:right;
+    
+  }
+  
+  .btContratar:hover{
+    cursor:pointer;
+  }
 
   
  
