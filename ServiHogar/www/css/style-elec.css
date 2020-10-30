@@ -56,33 +56,22 @@ label {
   color:white;
 }
 #fecha {
-  background: white;
-  font-size: 30px;
-  border-radius: 15px;
-}
-
-#descripcion {
-  background:white ;
-  font-size: 90px;
-  border-radius: 15px;
-  
-}
-
-#btContratar {
+  color: black;
   text-decoration: none;
-  padding: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: helvetica;
+  font-size:18px;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  font-size: 25px;
-  font-style: italic;
-  color: white;
-  background-color:#0075d9;;
-  border-radius: 15px;
-  border: 3px double #0075d9;;
+  background-color:#0075d9;
+  border-radius: 20px;
+  border: 1px solid #0075d9;
+  width: 14%;
+  height: auto;
+  padding: 5px 5px 5px 5px;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  margin-top: 200px; 
+  margin-left: -87px;
 }
 
-label {
- font-size: 20px;
 
