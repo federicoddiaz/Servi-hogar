@@ -200,3 +200,45 @@ function respuestaRecibida(respuesta, arreglo_profesionales){
 		arreglo_profesionales[i] = dtoProf;
 		}	
 }
+
+function busca_contrat(profe, arreglo_contrataciones) {
+	//Define la variable para responder si encontro o no el usuario
+	//  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
+	//  "ok" (encontro al usuario)
+	var resp_leer_contratacion = "";
+	//Arma el "post" para enviarlo por ajax
+	var parametros = {
+		"Nombre" : profe,
+	};
+	//Invoca a la url donde se encuentra el archivo "usuario_leer_por_usuario.php"
+	$.ajax({
+		data: parametros,
+		type: 'post',
+		dataType: 'json',
+		async: false,
+		url: 'https://servi-hogar2020.000webhostapp.com/leer_contrataciones.php',
+		success: function(respuesta) {
+			resp_leer_contratacion = respuesta[0]['estado'];
+			respuestaRecibidaContra(respuesta, arreglo_contrataciones);
+			
+		},
+		error: function(jqXHR, textStatus, errorMessage) {
+			respuestaNoRecibida(jqXHR, textStatus);
+			resp_leer_contratacion = "er";			
+		}
+	});
+return resp_leer_contratacion;
+}
+
+function respuestaRecibidaContra(respuesta, arreglo_contrataciones){
+	//Recorre con un "for" la respuesta, crea para cada fila un "DTO",
+	//le asigna la informacion recibida y finalmente agrega el dto al arreglo
+	for (i in respuesta) {
+		var dtoContra = new DtoContrataciones();
+		dtoContra.setUsuario = respuesta[i]['Nombre'];
+		dtoContra.setDireccion = respuesta[i]['Direccion'];
+		dtoContra.setDescripcion = respuesta[i]['Descripcion'];
+		dtoContra.setFecha = respuesta[i]['Fecha'];
+		arreglo_contrataciones[i] = dtoContra;
+	}	
+}
