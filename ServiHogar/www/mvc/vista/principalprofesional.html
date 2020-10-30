@@ -22,7 +22,7 @@
 	<script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
 </head>
 
-<body>
+<body onload="cargarDatos()">
 				
 				<header>
                     <div class="container">
@@ -31,7 +31,7 @@
 					
 					<nav>
 					<ul>
-					<li><input type="submit" name="btsalir" id="btsalir" value="Salir" class="botonSalir" /></li>
+					<li><a onclick="window.location.href='login.html'"><input type="submit" name="btsalir" id="btsalir" value="Salir" class="botonSalir" /> </a></li>
 					</ul>
 					</nav>
 					
@@ -44,10 +44,18 @@
 					 <center>
 					 <table>
 					 <tr>
-					 <td style="vertical-align:middle; text-align:center"><figure><img src="../../images/Perfil.png" class="PrImg2"></figure>
-						<a  onclick="window.location.href='principalperfilprofesional.html'" style="color:white;">Perfil</a></td>
-					 <td style="vertical-align:middle; text-align:center"><figure><img src="../../images/Contratacion.png" class="PrImg2"></figure>
-						<a  onclick="window.location.href='contratacionesProf.html'" style="color:white;">Contrataciones</a></td>
+					 <td style="vertical-align:middle; text-align:center">
+						<figure>
+							<img src="../../images/Perfil.png" class="PrImg2">
+						</figure>
+						<a  onclick="window.location.href='principalperfilprofesional.html'" style="color:white;">Perfil</a>
+					</td>
+					 <td style="vertical-align:middle; text-align:center">
+						<figure>
+							<img src="../../images/Contratacion.png" class="PrImg2">
+						</figure>
+						<a onclick="window.location.href='../vista/contratacionesProf.html?nombre=' + nombre" style="color:white;">Contrataciones</a>
+					</td>
 											 
                      </tr>
 					 </table>

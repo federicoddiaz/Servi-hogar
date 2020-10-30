@@ -36,13 +36,15 @@ function cargarProfesionales() {
 }
 
 function agregarProf(nombre, direccion) {
-    var p = document.createElement("p");
+	var p = document.createElement("p");
     p.innerHTML = nombre;
+	p.setAttribute("id","pname");
     li.appendChild(p);
     var p2 = document.createElement("p");
 	p2.innerHTML = direccion; 
     li.appendChild(p2);
     p2 = document.createElement("button");
+    p2.setAttribute("id","btnContratar");
     p2.innerHTML = "Contratar";
     li.appendChild(p2);
 }

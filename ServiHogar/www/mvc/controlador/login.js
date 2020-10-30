@@ -20,7 +20,7 @@ function Ingresar(){
 	
 	var res_validar_ingreso_prof = validar_ingreso_prof(username, password);
 	if (res_validar_ingreso_prof == "2") {		
-		window.location.href='../vista/principal.html';
+		window.location.href='../vista/principalprofesional.html?username=' + username;
 			return false;
 		} else {
 			if(res_validar_ingreso_prof== "1"){
