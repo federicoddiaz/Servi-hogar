@@ -46,8 +46,15 @@ function agregarProf(nombre, direccion) {
     var p2 = document.createElement("p");
 	p2.innerHTML = direccion; 
     li.appendChild(p2);
-    p2 = document.createElement("button");
-    p2.setAttribute("id","btnContratar");
-    p2.innerHTML = "Contratar";
-    li.appendChild(p2);
+    var p3 = document.createElement("button");
+    //p3.setAttribute("id","btnContratar");
+    p3.setAttribute("onclick","contratar()");
+    p3.innerHTML = "Contratar";
+    li.appendChild(p3);
 }
+
+$("#btnContratar").click(contratar);
+function contratar(){
+    window.location.href='../vista/contratacionesUsuario.html';
+}
+

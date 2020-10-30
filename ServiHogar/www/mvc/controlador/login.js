@@ -14,7 +14,7 @@ function Ingresar(){
 	
 	var res_validar_ingreso = validar_ingreso(username, password);	
 	if (res_validar_ingreso == "2") {
-		window.location.href='../vista/principal.html';
+		window.location.href='../vista/principal.html?username=' + username;
 			return false;
 		} 
 	
