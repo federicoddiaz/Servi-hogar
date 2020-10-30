@@ -323,10 +323,19 @@ input[type="text"] {
   text-align:center;
   
   }
+
+  .AImg1 {
+    padding-top: 20px;
+    display: inline-block;
+    width: 60%;
+    height: auto;
+    text-align:center;
+    
+    }
   
 .card {
-   	padding-top: 100px;
-    display: inline-block;
+     padding-top: 100px;
+     display: inline-block;
     color: #0075d9;
 	background-color:#848484;
 	border-radius: 20px;
@@ -403,6 +412,7 @@ input[type="text"] {
     cursor:pointer;
   }
 
+  
   
  
   
