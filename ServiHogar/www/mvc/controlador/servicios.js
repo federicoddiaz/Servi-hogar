@@ -22,12 +22,14 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-function electricistas() {
-    window.location.href='electricista.html?username=' + username;
-}
+
 
 function albaniles() {
     window.location.href='albanil.html?username=' + username;
+}
+
+function electricistas() {
+    window.location.href='electricista.html?username=' + username;
 }
 
 function plomeros() {
