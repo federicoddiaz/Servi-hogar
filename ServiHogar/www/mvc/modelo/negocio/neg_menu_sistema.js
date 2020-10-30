@@ -13,4 +13,21 @@ function obtenerProfesionales(profe, arreglo_profesionales) {
 		} else {
 			return "2";
 		}	
-	}	
+}
+
+function obtenerContrataciones(profe, arreglo_contrataciones) {
+	//Define una variable para recibir la respuesta de la lectura	
+		var resp_contrataciones = "";
+	//Llama a la "dao" para que acceda al webservice
+		resp_contrataciones = busca_contrat(profe, arreglo_contrataciones);
+	//Si no se pudo conectar retorna "4"
+		if (resp_contrataciones == "er") {
+			return "4";
+		}	
+	//Si no se pudo leer retorna "1"
+		if (resp_contrataciones != "ok") {
+			return "1";
+		} else {
+			return "2";
+		}	
+}	
