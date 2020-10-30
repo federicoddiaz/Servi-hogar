@@ -6,13 +6,13 @@
 // 
 class DtoContrataciones {
 	constructor(setId = 0, setFecha = '', 
-				setId_cliente = 0, setId_profesional = 0,
+				setId_cliente = 0, setProfesional = '',
 				setUsuario = '', setDescripcion = '',
 				setDireccion = '') {
 		this.id = setId;
 		this.fecha = setFecha;
 		this.id_cliente = setId_cliente;
-		this.id_profesional = setId_profesional;
+		this.profesional = setProfesional;
 		this.descripcion = setDescripcion;
 		this.usuario = setUsuario;
 		this.direccion = setDireccion;
@@ -30,8 +30,8 @@ class DtoContrataciones {
 		this.id_cliente = id_cliente;
 	}
 	
-	set setId_profesional(id_profesional) {
-		this.id_profesional = id_profesional;
+	set setProfesional(profesional) {
+		this.profesional = profesional;
 	}
 
 	set setUsuario(usuario) {
@@ -58,8 +58,8 @@ class DtoContrataciones {
 		return this.id_cliente;
 	}
 	
-	get getId_profesional(){
-		return this.id_profesional;
+	get getProfesional(){
+		return this.profesional;
 	}
 	
 	get getDescripcion(){

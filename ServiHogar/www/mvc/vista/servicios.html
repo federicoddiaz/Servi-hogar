@@ -30,7 +30,7 @@
 	 <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
 </head>
 
-<body>
+<body onload="cargarDatos()">
 				<header>
                     
 					
@@ -56,17 +56,17 @@
                     <p> Encontra todos los profesionales que necesitas para tu hogar </p>
 
 
-                              <center>
+                     <center>
 					 <table>
 					 <tr>
 					 <td style="vertical-align:right; text-align:center"><figure><img src="../../images/Electristas.png" class="PrImg1"></figure>
-						<a  onclick="window.location.href='electricista.html'" style="color:white;">Electricistas</a></td>
+						<a  onclick="electricistas()" style="color:white;">Electricistas</a></td>
 					 <td style="vertical-align:middle; text-align:center"><figure><img src="../../images/Albañil.png" class="PrImg2"></figure>
-						<a  onclick="window.location.href='albanil.html'" style="color:white;">Albañiles</a></td>
+						<a  onclick="albaniles()" style="color:white;">Albañiles</a></td>
 					 <td style="vertical-align:left; text-align:center"><figure><img src="../../images/Plomero1.png" class="PrImg3"></figure>
-						<a onclick="window.location.href='plomero.html'" style="color:white;">Plomeros</a></td>
+						<a onclick="plomeros()" style="color:white;">Plomeros</a></td>
 						<td style="vertical-align:left; text-align:center"><figure><img src="../../images/Pintores.png" class="PrImg3"></figure>
-						<a onclick="window.location.href='pintor.html'" style="color:white;">Pintores</a></td>
+						<a onclick="pintores()" style="color:white;">Pintores</a></td>
                      </tr>
 					 </table>
 					 </center>
@@ -80,7 +80,6 @@
     <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
     <script type="text/javascript" src="../../js/my-app.js"></script>
 	<script type="text/javascript" src="../controlador/servicios.js"></script>
-	<script type="text/javascript" src="../controlador/principal.js"></script>
 </body>
 
 </html>
