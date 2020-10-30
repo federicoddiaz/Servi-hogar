@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
-
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
@@ -27,10 +16,10 @@
     <link rel="stylesheet" href="../../css/styles.css">
 	<link rel="stylesheet" href="../../css/Navbar.css">
 	<link rel="stylesheet" href="../../css/style-elec.css">
-	 <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
 </head>
 
-<body>
+<body onload="cargarDatos();" >
 				<header>
                     
 					
@@ -71,6 +60,12 @@
 
          </ul>
     </form>
-
+    <script type="text/javascript" src="../../cordova.js"></script>
+    <script type="text/javascript" src="../../lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="../../js/my-app.js"></script>
+    <script type="text/javascript" src="../controlador/contrataciones.js"></script>
+    <script type="text/javascript" src="../modelo/negocio/neg_contratacion.js"></script>
+    <script type="text/javascript" src="../modelo/dao/dao_clientes.js"></script>
+    <script type="text/javascript" src="../modelo/dto/dto_contrataciones.js"></script>
 </body>
 </html>

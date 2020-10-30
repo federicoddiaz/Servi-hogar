@@ -1,4 +1,5 @@
 var profe = "";
+var username = "";
 
 var arreglo_profesionales = new Array();
 
@@ -15,8 +16,21 @@ $('#inicio').click(inicio);
     function inicio(){
     window.location.href='../vista/principal.html';
 }
+
+function cargarUsuario() {
+    username = getParameterByName('username');
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 function cargarDatos(profesion) {
     profe = profesion;
+    cargarUsuario();
     seleccionarProfesionales();
     cargarProfesionales();
 }
@@ -36,15 +50,20 @@ function cargarProfesionales() {
 }
 
 function agregarProf(nombre, direccion) {
-	var p = document.createElement("p");
+    var p = document.createElement("p");
     p.innerHTML = nombre;
 	p.setAttribute("id","pname");
     li.appendChild(p);
     var p2 = document.createElement("p");
 	p2.innerHTML = direccion; 
     li.appendChild(p2);
-    p2 = document.createElement("button");
-    p2.setAttribute("id","btnContratar");
-    p2.innerHTML = "Contratar";
-    li.appendChild(p2);
+    var p3 = document.createElement("button");
+    p3.setAttribute("id",nombre);
+    p3.setAttribute("onclick","contratar(this.id)");
+    p3.innerHTML = "Contratar";
+    li.appendChild(p3);
+}
+
+function contratar(profesional){
+    window.location.href='../vista/contratacionesUsuario.html?username=' + username + '&nombre=' + profesional;
 }
