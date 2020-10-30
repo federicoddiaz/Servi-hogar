@@ -242,3 +242,31 @@ function respuestaRecibidaContra(respuesta, arreglo_contrataciones){
 		arreglo_contrataciones[i] = dtoContra;
 	}	
 }
+
+function busca_Todos_prof(profe, arreglo_profesionales) {
+	//Define la variable para responder si encontro o no el usuario
+	//  Los valores posibles son "er" (error de conexion), "" (no encontro el usuario),
+	//  "ok" (encontro al usuario)
+	var resp_leer_profesion = "";
+	//Arma el "post" para enviarlo por ajax
+	var parametros = {
+		"Profesion" : profe,
+	};
+	//Invoca a la url donde se encuentra el archivo "usuario_leer_por_usuario.php"
+	$.ajax({
+		data: parametros,
+		type: 'post',
+		dataType: 'json',
+		async: false,
+		url: 'https://servi-hogar2020.000webhostapp.com/leer_todos_profesionales.php',
+		success: function(respuesta) {
+			respuestaRecibida(respuesta, arreglo_profesionales);
+			resp_leer_profesion = respuesta[0]['estado'];
+		},
+		error: function(jqXHR, textStatus, errorMessage) {
+			respuestaNoRecibida(jqXHR, textStatus);
+			resp_leer_profesion = "er";			
+		}
+	});
+return resp_leer_profesion;
+}
