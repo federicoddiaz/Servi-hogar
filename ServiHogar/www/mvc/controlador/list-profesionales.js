@@ -1,6 +1,6 @@
-var profe = "";
+var list_profe = "";
 
-var arreglo_profesionales = new Array();
+var arreglo_list_profesionales = new Array();
 
 var li = document.getElementById('profesionales');
 
@@ -13,10 +13,13 @@ document.getElementById('pcimagenes').align="center";
 
 $('#inicio').click(inicio);
     function inicio(){
-    window.location.href='../vista/principal.html';
+    window.location.href='../vista/principalprofesional.html.html';
 }
-function cargarDatos(profesion) {
-    profe = profesion;
+
+
+
+function mostrarDatos(profesion) {
+    list_profe = profesion;
     seleccionarProfesionales();
     cargarProfesionales();
 }
