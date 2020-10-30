@@ -151,26 +151,25 @@ function agregar_usuario(DtoClientes) {
 	});
 	return resp_agre_usuario;
 }
-function agregar_contrataciones(fecha,id_cliente,id_profesional,descripcion) {
+function agregar_contratacion(DtoContrataciones) {
 	//alert ("llegue a dao");
 //Define la variable para responder si encontró o no el usuario
 //  Los valores posibles son "er" (error de conexion), "" (no agrego el usuario),
 //  "ok" (agrego el usuario)
-	var resp_agre_usuario = "";
+	var resp_contrataciones = "";
 
-	fecha = fecha;
-	id_cliente = id_cliente;
-	id_profesional = id_profesional;
-	descripcion = descripcion;
+	profesional = DtoContrataciones.getProfesional;
+	username = DtoContrataciones.getUsuario;
+	fecha = DtoContrataciones.getFecha;
+	descripcion = DtoContrataciones.getDescripcion;
 	
 
 //Arma el "post" para enviarlo por ajax
 	var parametros = {
-		"fecha" : fecha,
-		"id_cliente" : id_cliente,
-		"id_profesional" : id_profesional,
-		"descripcion" : descripcion,
-		
+		"Fecha" : fecha,
+		"Username" : username,
+		"Profesional" : profesional,
+		"Descripcion" : descripcion,
 	};
 //Invoca a la url donde se encuentra el archivo "usuario_agregar.php"
 	$.ajax({
@@ -180,13 +179,12 @@ function agregar_contrataciones(fecha,id_cliente,id_profesional,descripcion) {
 		async: false,
 		url: 'https://servi-hogar2020.000webhostapp.com/agregar_contrataciones.php',
 		success: function(respuesta) {
-			resp_agre_usuario = "ok";
-			//DtoClientes.setId = respuesta['idUsuarioNuevo'];
+			resp_contrataciones = "ok";
 		},
 		error: function(jqXHR, textStatus, errorMessage) {
 			respuestaNoRecibida(jqXHR, textStatus);	
-			resp_agre_usuario = "er";
+			resp_contrataciones = "er";
 		}
 	});
-	return resp_agre_usuario;
+	return resp_contrataciones;
 }

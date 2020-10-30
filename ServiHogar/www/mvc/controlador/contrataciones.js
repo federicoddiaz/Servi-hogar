@@ -1,23 +1,35 @@
+var username = "";
+var profesional = "";
+
 
 $('#btContratar').click(Contratar);
-
 function Contratar(){
-
-	var inFecha = $('#Fecha');
+	var inFecha = $('#fecha');
 	var fecha = inFecha.val().trim();
-	inid.val(fecha);
+	inFecha.val(fecha);
 
-	var inDescripcion = $('#Descripcion');
+	var inDescripcion = $('#descripcion');
 	var descripcion = inDescripcion.val().trim();
-	inDescripcion.val(Descripcion);
-
-
-var contratar = contratar(fecha, descripcion);
-	if ( "") {
-		alert("Profesional disponible, aguarde su visita");
-		window.location.href='../vista/contratacionesUsuario';	
+	inDescripcion.val(descripcion);
+	
+	var res_contratar = contratar(fecha, descripcion, username, profesional);
+	if (res_contratar == "2") {
+		alert("El profesional fue contratado");
+		window.location.href='../vista/principal.html?username=' + username;
 		return false;
-	} else {
-		alert ("Profesional No disponible esa fecha");
+	}else{
+		alert("El profesional no está disponible en la fecha seleccionada");
 	}
+}
+
+function cargarDatos() {
+	username = getParameterByName('username');
+	profesional = getParameterByName('nombre');
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
